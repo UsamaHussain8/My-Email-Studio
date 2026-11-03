@@ -1,0 +1,25 @@
+first_name,last_name,email,group,joined_on,consent
+Ayesha,Khan,ayesha.khan@example.com,past-buyer,2026-09-14,waitlist form
+Bilal,Ahmed,bilal.ahmed@example.com,past-buyer,2026-09-15,waitlist form
+Sara,Malik,sara.malik@example.com,past-buyer,2026-09-18,waitlist form
+James,Porter,james.porter@example.com,past-buyer,2026-09-21,waitlist form
+Hina,Qureshi,hina.qureshi@example.com,past-buyer,2026-09-27,waitlist form
+Omar,Siddiqui,omar.siddiqui@example.com,past-buyer,2026-10-03,waitlist form
+Lena,Fischer,lena.fischer@example.com,past-buyer,2026-10-09,waitlist form
+Imran,Sheikh,imran.sheikh@example.com,past-buyer,2026-10-16,waitlist form
+Fatima,Raza,fatima.raza@example.com,past-seller,2026-09-14,waitlist form
+Daniel,Hughes,daniel.hughes@example.com,past-seller,2026-09-16,waitlist form
+Zainab,Hussain,zainab.hussain@example.com,past-seller,2026-09-20,waitlist form
+Ali,Chaudhry,ali.chaudhry@example.com,past-seller,2026-09-24,waitlist form
+Maria,Lopez,maria.lopez@example.com,past-seller,2026-09-30,waitlist form
+Usman,Butt,usman.butt@example.com,past-seller,2026-10-06,waitlist form
+Nadia,Iqbal,nadia.iqbal@example.com,past-seller,2026-10-12,waitlist form
+Kevin,Walsh,kevin.walsh@example.com,past-seller,2026-10-19,waitlist form
+Tom,Becker,tom.becker@example.com,quiet-user,2026-09-22,waitlist form
+Mehwish,Akhtar,mehwish.akhtar@example.com,quiet-user,2026-09-25,waitlist form
+Hamza,Javed,hamza.javed@example.com,quiet-user,2026-09-29,waitlist form
+Priya,Sharma,priya.sharma@example.com,quiet-user,2026-10-02,waitlist form
+Asad,Mirza,asad.mirza@example.com,quiet-user,2026-10-08,waitlist form
+Emily,Carter,emily.carter@example.com,quiet-user,2026-10-14,waitlist form
+Rabia,Anwar,rabia.anwar@example.com,quiet-user,2026-10-20,waitlist form
+Saad,Farooq,saad.farooq@example.com,quiet-user,2026-10-25,waitlist form
