@@ -1,5 +1,5 @@
 Subject: Your spot in The Calm Friday is ready
-Preview: Free to join, plus 100 bonus credits when you join by Thursday 31 December.
+Preview: Free to join, plus 100 bonus credits for joining by Thursday 31 December.
 
 Dear {{first_name}},
 
@@ -9,8 +9,8 @@ The Calm Friday is a **free membership** for a calmer way to buy and swap pre-lo
 
 As a member, you can:
 
-- **Earn credits** when you swap or sell a gadget to us. Each accepted item earns up to 500 credits (up to Rs 5,000), based on its value.
-- **Save 15% on Calm Friday**, Friday 1 January 2027, on phones, laptops and tablets, and accessories.
+- **Earn credits** when you swap or sell a gadget to us. Each accepted item earns up to 500 credits (up to Rs 5,000), based on the item and its condition.
+- **Save 15% on Calm Friday**, Friday 1 January 2027, on pre-loved phones, laptops, tablets and accessories. Audio and wearables are not included.
 - **Use your credits** on the same order as the 15% off.
 
 As a thank-you for waiting with us, you get **100 bonus credits (Rs 1,000) for joining by Thursday 31 December**. Your credits don't expire while your account is active.

@@ -9,10 +9,10 @@ You may have a few questions about The Calm Friday. Here are the answers, all in
 Yes. The Calm Friday is a free membership. There is nothing to pay.
 
 **How are credits worked out?**
-Each accepted item earns up to 500 credits (up to Rs 5,000), based on its value. For example, [credit example 1] and [credit example 2]. 100 credits = Rs 1,000.
+Each accepted item earns up to 500 credits (up to Rs 5,000), based on the item and its condition. For example, an older phone earns about 150 credits, and a phone in good condition about 350. An older laptop earns about 300 credits, and a laptop in good condition up to 500. 100 credits = Rs 1,000.
 
 **Which items get 15% off on Calm Friday?**
-On Friday 1 January 2027, members get 15% off phones, laptops and tablets, and accessories. Audio and wearables are not included. That means earbuds, headphones, speakers and smartwatches.
+On Friday 1 January 2027, members get 15% off pre-loved phones, laptops, tablets and accessories. Audio and wearables are not included. That means earbuds, headphones, speakers and smartwatches.
 
 **Can I use my credits and the 15% off together?**
 Yes. You can use your credits on the same order as the 15% off.
@@ -21,9 +21,9 @@ Yes. You can use your credits on the same order as the 15% off.
 No. Your credits don't expire while your account is active. They are only lost if the account is deactivated.
 
 **What if my item is not accepted?**
-We accept items of decent to good quality only, and we describe every item honestly. If your item is not accepted, [confirm: what happens next, for example we send it back to you].
+We accept items of decent to good quality only. If your item is not accepted, we send it back to you at no cost.
 
-One more thing: as a waitlist member, you get 100 bonus credits for joining by Thursday 31 December.
+One more thing: as a waitlist member, you get 100 bonus credits (Rs 1,000) for joining by Thursday 31 December.
 
 [Join The Calm Friday](https://easybuy.example/calm-friday)
 

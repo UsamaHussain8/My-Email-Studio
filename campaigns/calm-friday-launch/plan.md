@@ -25,12 +25,13 @@ Related: `campaigns/calm-friday/brief.md` (the offer brief and confirmed decisio
 | | Detail |
 |---|---|
 | Membership | Free. Nothing to pay. |
-| Swap credits | **Up to 500 credits** (up to Rs 5,000) per accepted item, based on the item's value |
+| Swap credits | **Up to 500 credits** (up to Rs 5,000) per accepted item, based on the item and its condition |
+| Credit examples | Older phone about 150. Phone in good condition about 350. Older laptop about 300. Laptop in good condition up to 500. |
 | Credit value | 100 credits = Rs 1,000 |
 | Credit expiry | Credits do not expire while the account is active. They are lost only if the account is deactivated. |
 | Waitlist thank-you | **100 bonus credits** (Rs 1,000) for joining by **Thu 31 Dec 2026** |
 | Calm Friday | **Fri 1 Jan 2027**, one day only |
-| 15% off applies to | Phones, laptops and tablets, accessories |
+| 15% off applies to | Phones, laptops, tablets and accessories |
 | 15% off does not apply to | Audio and wearables (earbuds, headphones, speakers, smartwatches) |
 | Combining | Credits can be used on the same order as the 15% off |
 | Quality rule | We accept items of decent to good quality only |
@@ -53,7 +54,7 @@ Related: `campaigns/calm-friday/brief.md` (the offer brief and confirmed decisio
 
 1. **Segment sizes.** Working estimate: about 50% Past Buyers, 25% Past Sellers, 25% Quiet Users. Replace with real numbers once the waitlist is exported.
 2. **Sign-up page link.** Drafts use a `[sign-up link]` placeholder until then.
-3. **How we explain credit value.** "Up to 500" needs 2 or 3 simple examples (for example, what an older phone earns compared with a recent laptop) so nobody expects 500 for every item. Needed before E2 and E4 are drafted.
+3. **How we explain credit value.** Done. Credits depend on the item and its condition. See "Credit examples" in the offer table.
 4. **Store set-up.** The 15% must work only on the right categories on 1 Jan, and bonus credits must land in the account when someone joins. Check both with whoever runs the store.
 
 Items marked **[confirm]** below change once these are known.
@@ -99,7 +100,7 @@ People who joined the waitlist but have not bought or sold with us.
 | # | Supporting message | Proof point |
 |---|---|---|
 | 1 | **Free to join.** Nothing to pay, no catch. | Membership is free. Say plainly what it includes. |
-| 2 | **Good for your wallet.** Members save on Calm Friday. | 15% off phones, laptops and tablets, and accessories on Fri 1 Jan. Credits can be used on the same order. |
+| 2 | **Good for your wallet.** Members save on Calm Friday. | 15% off phones, laptops, tablets and accessories on Fri 1 Jan. Credits can be used on the same order. |
 | 3 | **Your old gadgets are worth something.** Swap or sell an item and earn credits. | Up to 500 credits (up to Rs 5,000) per accepted item, based on its value. Credits don't expire while your account is active. |
 | 4 | **Quality you can trust.** We only accept items of decent to good quality, and we describe each one honestly. | Our item check process. Show what we check; do not promise perfection. |
 | 5 | **No rush, ever.** Take your time. | Credits don't expire. Even the bonus deadline is mentioned calmly, never as pressure. |
@@ -113,7 +114,7 @@ People who joined the waitlist but have not bought or sold with us.
 ### Accuracy rules for every email
 
 - Always say **"up to 500 credits"**. Never "500 credits" on its own.
-- When mentioning the 15%, name the categories: phones, laptops and tablets, accessories. Never say "15% off everything".
+- When mentioning the 15%, name the categories: "phones, laptops, tablets and accessories", in that order and with that wording. Never say "15% off everything". In a preview line, if all four do not fit, write "phones, laptops, tablets and more".
 - When saying credits don't expire, add "while your account is active" at least once per email (or link to the Q&A).
 - The bonus is **100 credits for joining by Thursday 31 December**. Use the same wording everywhere.
 - Call it a **membership**, never a subscription.
@@ -141,6 +142,7 @@ People who joined the waitlist but have not bought or sold with us.
 
 - **Join track** (waitlist members who have not joined yet): E1 to E8, asking them to join.
 - **Member track** (anyone who has joined): the welcome email, then the member versions of E7 and E8 about Calm Friday. Members stop getting join emails as soon as they join.
+- **Email files for E7:** `emails/04-calm-friday-is-tomorrow.md` is the join-track version. `emails/04-calm-friday-is-tomorrow-members.md` is the member-track version.
 
 ### Supporting pieces (not channels, but needed)
 
@@ -178,7 +180,7 @@ We are not using social, ads or partners in this campaign. If the target looks o
 | **Week 3** (21 to 27 Dec) | **E5 "A calm note before the holidays"** (Mon 21 Dec). Short and warm. One line on the bonus (join by 31 Dec) and Calm Friday (1 Jan). | Email, join track (not Quiet Users) | Nice-to-have. No sends 24 to 27 Dec. | Not started |
 | **Week 4** (28 Dec to 3 Jan) | **E6 "Start the new year calmly"** (Tue 29 Dec). Swap an old gadget now so your credits are ready for Calm Friday. Bonus open until Thu 31 Dec. | Email, join track (not Quiet Users) | | Not started |
 | | **E7 "Calm Friday is tomorrow"** (Thu 31 Dec). Two versions. Join track: a calm note that today is the last day for the 100 bonus credits, and Calm Friday is tomorrow. Member track: Calm Friday is tomorrow, here is what's 15% off, your credits are ready. | Email, both tracks | No urgency words. Brand-review this one twice. | Not started |
-| | **E8 "It's Calm Friday"** (Fri 1 Jan, morning). Short. Two versions. Members: 15% off phones, laptops and tablets, and accessories today, credits welcome. Join track: join free today to get the 15% off. | Email, both tracks | Keep it very short. It's New Year's Day. | Not started |
+| | **E8 "It's Calm Friday"** (Fri 1 Jan, morning). Short. Two versions. Members: 15% off phones, laptops, tablets and accessories today, credits welcome. Join track: join free today to get the 15% off. | Email, both tracks | Keep it very short. It's New Year's Day. | Not started |
 | Always on | **Welcome email**, sent when someone joins | Email, new members | Confirms bonus credits (if joined by 31 Dec) and the 1 Jan date. | Not started |
 | After (4 to 8 Jan) | **Wrap-up report** | n/a | Run `/marketing:performance-report` | Not started |
 
