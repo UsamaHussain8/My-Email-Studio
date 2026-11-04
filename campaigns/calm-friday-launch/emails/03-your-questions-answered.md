@@ -9,7 +9,7 @@ You may have a few questions about The Calm Friday. Here are the answers, all in
 Yes. The Calm Friday is a free membership. There is nothing to pay.
 
 **How are credits worked out?**
-Each accepted item earns up to 500 credits (up to Rs 5,000), based on the item and its condition. For example, an older phone earns about 150 credits, and a phone in good condition about 350. An older laptop earns about 300 credits, and a laptop in good condition up to 500. 100 credits = Rs 1,000.
+We give you up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition. 100 credits = Rs 1,000.
 
 **Which items get 15% off on Calm Friday?**
 On Friday 1 January 2027, members get 15% off pre-loved phones, laptops, tablets and accessories. Audio and wearables are not included. That means earbuds, headphones, speakers and smartwatches.

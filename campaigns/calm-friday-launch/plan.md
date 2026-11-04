@@ -26,7 +26,6 @@ Related: `campaigns/calm-friday/brief.md` (the offer brief and confirmed decisio
 |---|---|
 | Membership | Free. Nothing to pay. |
 | Swap credits | **Up to 500 credits** (up to Rs 5,000) per accepted item, based on the item and its condition |
-| Credit examples | Older phone about 150. Phone in good condition about 350. Older laptop about 300. Laptop in good condition up to 500. |
 | Credit value | 100 credits = Rs 1,000 |
 | Credit expiry | Credits do not expire while the account is active. They are lost only if the account is deactivated. |
 | Waitlist thank-you | **100 bonus credits** (Rs 1,000) for joining by **Thu 31 Dec 2026** |
@@ -54,7 +53,7 @@ Related: `campaigns/calm-friday/brief.md` (the offer brief and confirmed decisio
 
 1. **Segment sizes.** Working estimate: about 50% Past Buyers, 25% Past Sellers, 25% Quiet Users. Replace with real numbers once the waitlist is exported.
 2. **Sign-up page link.** Drafts use a `[sign-up link]` placeholder until then.
-3. **How we explain credit value.** Done. Credits depend on the item and its condition. See "Credit examples" in the offer table.
+3. **How we explain credit value.** Done. Emails say: "We give you up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition." No fixed examples, so we don't promise exact amounts.
 4. **Store set-up.** The 15% must work only on the right categories on 1 Jan, and bonus credits must land in the account when someone joins. Check both with whoever runs the store.
 
 Items marked **[confirm]** below change once these are known.

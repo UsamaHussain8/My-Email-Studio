@@ -9,7 +9,7 @@ The Calm Friday is a **free membership** for a calmer way to buy and swap pre-lo
 
 As a member, you can:
 
-- **Earn credits** when you swap or sell a gadget to us. Each accepted item earns up to 500 credits (up to Rs 5,000), based on the item and its condition.
+- **Earn credits** when you swap or sell a gadget to us. We give you up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition.
 - **Save 15% on Calm Friday**, Friday 1 January 2027, on pre-loved phones, laptops, tablets and accessories. Audio and wearables are not included.
 - **Use your credits** on the same order as the 15% off.
 
