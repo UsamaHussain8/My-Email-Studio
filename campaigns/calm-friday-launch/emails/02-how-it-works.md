@@ -6,10 +6,10 @@ Dear {{first_name}},
 Here is how The Calm Friday works. It's simple, and you can go at your own pace.
 
 **1. Join for free.**
-Membership costs nothing. Join by Thursday 31 December and we'll add 100 bonus credits (Rs 1,000) to your account.
+Membership costs nothing. As a waitlist member, you get 100 bonus credits (Rs 1,000) for joining by Thursday 31 December.
 
 **2. Swap or sell a gadget.**
-Send us a gadget you no longer use. We accept items of decent to good quality, and we check each one with care.
+Choose a gadget you no longer use, and swap or sell it to us. We accept items of decent to good quality, and we check each one with care.
 
 **3. Earn up to 500 credits.**
 Each accepted item earns up to 500 credits (up to Rs 5,000), based on its value. For example:
@@ -20,7 +20,7 @@ Each accepted item earns up to 500 credits (up to Rs 5,000), based on its value.
 100 credits = Rs 1,000. Your credits don't expire while your account is active.
 
 **4. Save 15% on Calm Friday.**
-On Friday 1 January 2027, members get 15% off phones, laptops and tablets, and accessories. You can use your credits on the same order.
+On Friday 1 January 2027, members get 15% off pre-loved phones, laptops and tablets, and accessories. You can use your credits on the same order.
 
 That's all there is to it.
 

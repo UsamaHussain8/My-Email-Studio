@@ -6,7 +6,7 @@ Dear {{first_name}},
 You may have a few questions about The Calm Friday. Here are the answers, all in one place.
 
 **Is it really free?**
-Yes. The Calm Friday is a free membership. There is nothing to pay, now or later.
+Yes. The Calm Friday is a free membership. There is nothing to pay.
 
 **How are credits worked out?**
 Each accepted item earns up to 500 credits (up to Rs 5,000), based on its value. For example, [credit example 1] and [credit example 2]. 100 credits = Rs 1,000.

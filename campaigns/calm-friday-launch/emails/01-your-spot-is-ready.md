@@ -15,8 +15,6 @@ As a member, you can:
 
 As a thank-you for waiting with us, you get **100 bonus credits (Rs 1,000) for joining by Thursday 31 December**. Your credits don't expire while your account is active.
 
-Joining is quick and simple.
-
 [Join The Calm Friday](https://easybuy.example/calm-friday)
 
 Regards,
