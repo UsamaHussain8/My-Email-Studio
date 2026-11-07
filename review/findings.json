@@ -1,4 +1,12 @@
 {
   "folder": "campaigns/calm-friday-launch",
-  "findings": []
+  "findings": [
+    {
+      "file": "campaigns/calm-friday-launch/emails/03-your-questions-answered.md",
+      "line": 24,
+      "severity": "low",
+      "problem": "The email promises \"If your item is not accepted, we send it back to you at no cost.\" Nothing in plan.md or notes/ confirms this policy, and the brief the plan points to (campaigns/calm-friday/brief.md) does not exist. If it isn't true, we are making a promise we can't keep, which breaks trust. The same sentence is on line 24 of all three group copies (past-buyer, past-seller and quiet-user).",
+      "fix": "Check with whoever runs the store that items we don't accept are returned for free. If yes, add it to the offer table in plan.md. If not, change the line in all four files to the real policy, or remove it and keep only \"We accept items of decent to good quality only.\""
+    }
+  ]
 }

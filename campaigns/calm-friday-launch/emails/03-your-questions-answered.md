@@ -21,7 +21,7 @@ Yes. You can use your credits on the same order as the 15% off.
 No. Your credits don't expire while your account is active. They are only lost if the account is deactivated.
 
 **What if my item is not accepted?**
-We accept items of decent to good quality only. If your item is not accepted, we send it back to you at no cost.
+We accept items of decent to good quality only. Our quality team checks every item we receive. If it passes, we add it to our store and you earn your credits. If it doesn't, we send it back to you, and you pay the return delivery cost. We hope you understand. Checking every item with care is how we keep our store one you can trust.
 
 One more thing: as a waitlist member, you get 100 bonus credits (Rs 1,000) for joining by Thursday 31 December.
 
