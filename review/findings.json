@@ -1,32 +1,33 @@
 {
+  "folder": "campaigns/test-bad",
   "findings": [
     {
-      "file": "campaigns/calm-friday-launch/emails/01-your-spot-is-ready.md",
+      "file": "campaigns/test-bad/emails/01-bad.md",
       "line": 1,
-      "severity": "medium",
-      "problem": "The subject line \"Your spot is ready: a calmer way to find pre-loved deals\" is 56 characters long. The email rules allow 50 at most, and many inboxes will cut it off.",
-      "fix": "Shorten it to 50 characters or fewer, for example \"Your spot is ready: calmer pre-loved deals\" (42 characters) or \"Your Calm Friday spot is ready\" (30 characters)."
+      "severity": "high",
+      "problem": "Still not fixed. The subject starts with \"Last chance\", which is on the brand's avoided-words list and doesn't fit our calm voice. It is also 53 characters, and the limit is 50. \"Detox your life\" also hints at the health claim that was taken out of the body.",
+      "fix": "Use a calm subject of 50 characters or fewer with no health angle, for example: \"Swap to a pre-loved phone this Calm Friday\" (42 characters)."
     },
     {
-      "file": "campaigns/calm-friday-launch/groups/past-buyer/emails/01-your-spot-is-ready.md",
-      "line": 1,
-      "severity": "medium",
-      "problem": "This file has the same 56-character subject line as the main email 01, which is over the 50-character limit.",
-      "fix": "Use the same shorter subject you pick for the main email 01, so all versions match."
+      "file": "campaigns/test-bad/emails/01-bad.md",
+      "line": 6,
+      "severity": "high",
+      "problem": "Still not fixed. The body says \"your last chance\", which is an avoided phrase. It also adds pressure that doesn't fit our calm, warm voice.",
+      "fix": "Say it without pressure, for example: \"Calm Friday is a nice time to pick up a pre-loved phone.\""
     },
     {
-      "file": "campaigns/calm-friday-launch/groups/past-seller/emails/01-your-spot-is-ready.md",
-      "line": 1,
+      "file": "campaigns/test-bad/emails/01-bad.md",
+      "line": 12,
       "severity": "medium",
-      "problem": "This file has the same 56-character subject line as the main email 01, which is over the 50-character limit.",
-      "fix": "Use the same shorter subject you pick for the main email 01, so all versions match."
+      "problem": "Still not fixed. There is a second link (\"See tablets too\", pointing to /tablets). The rules allow exactly one main link, and it must go to https://easybuy.example/calm-friday.",
+      "fix": "Delete line 12 and keep only [Shop phones](https://easybuy.example/calm-friday)."
     },
     {
-      "file": "campaigns/calm-friday-launch/groups/quiet-user/emails/01-your-spot-is-ready.md",
-      "line": 1,
-      "severity": "medium",
-      "problem": "This file has the same 56-character subject line as the main email 01, which is over the 50-character limit.",
-      "fix": "Use the same shorter subject you pick for the main email 01, so all versions match."
+      "file": "campaigns/test-bad/emails/01-bad.md",
+      "line": 2,
+      "severity": "low",
+      "problem": "Still not fixed. The preview line is an internal note (\"This is a test email that breaks our rules on purpose.\"). Readers would see it in their inbox.",
+      "fix": "Write real preview copy of 90 characters or fewer, for example: \"Good gadgets, gently used, at a price your wallet will like.\""
     }
   ]
 }

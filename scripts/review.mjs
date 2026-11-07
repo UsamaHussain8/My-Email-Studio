@@ -21,9 +21,31 @@ if (!existsSync(resolve(root, folder))) {
 }
 
 const schema = readFileSync(resolve(root, "review/findings.schema.json"), "utf8");
-const prompt =
+const findingsPath = resolve(root, "review/findings.json");
+
+// Compare folders by their full path so "campaigns/x" and "./campaigns/x/" match.
+const sameFolder = (a, b) => resolve(root, a) === resolve(root, b);
+
+let prompt =
   `Review every email in ${folder} against brand/voice.md and .claude/rules/emails.md. ` +
   `Report only real problems.`;
+
+// If the last review was of this same folder, pass its findings so this run
+// reports only new or still-unfixed problems.
+if (existsSync(findingsPath)) {
+  try {
+    const previous = JSON.parse(readFileSync(findingsPath, "utf8"));
+    if (previous.folder && sameFolder(previous.folder, folder) && Array.isArray(previous.findings)) {
+      prompt +=
+        `\n\nThese are findings from the last review. Report only problems that are new or still not fixed. ` +
+        `Don't repeat ones that have been fixed.\n\n` +
+        JSON.stringify(previous.findings, null, 2);
+      console.log(`Including ${previous.findings.length} finding(s) from the last review of ${folder}.`);
+    }
+  } catch {
+    console.log("Could not read the last review's findings, so this is a fresh review.");
+  }
+}
 
 // Pass arguments as an array (no shell) so the schema text needs no quoting.
 const run = spawnSync(
@@ -57,7 +79,7 @@ if (!output || !Array.isArray(output.findings)) {
 }
 
 mkdirSync(resolve(root, "review"), { recursive: true });
-writeFileSync(resolve(root, "review/findings.json"), JSON.stringify(output, null, 2) + "\n");
+writeFileSync(findingsPath, JSON.stringify({ folder, findings: output.findings }, null, 2) + "\n");
 
 const count = (s) => output.findings.filter((f) => f.severity === s).length;
 const high = count("high");

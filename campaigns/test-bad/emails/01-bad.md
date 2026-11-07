@@ -5,7 +5,7 @@ Dear {{first_name}},
 
 This is your last chance to grab a pre-loved phone before Calm Friday ends.
 
-Swapping to a pre-loved gadget is a full digital detox. It will clear toxins from your body and help you sleep better.
+A pre-loved phone does everything you need, and it's kind to your wallet.
 
 [Shop phones](https://easybuy.example/calm-friday)
 
