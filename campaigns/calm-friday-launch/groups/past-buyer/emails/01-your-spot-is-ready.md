@@ -1,4 +1,4 @@
-Subject: Your spot is ready: a calmer way to find pre-loved deals
+Subject: Your spot is ready: calmer pre-loved deals
 Preview: Free to join, plus 100 bonus credits for joining by Thursday 31 December.
 
 Dear {{first_name}},

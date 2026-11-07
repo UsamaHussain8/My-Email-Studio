@@ -1,11 +1,11 @@
-Subject: Last chance to detox your life with a pre-loved phone
+Subject: Last chance: brand new phones, pre-loved prices
 Preview: This is a test email that breaks our rules on purpose.
 
 Dear {{first_name}},
 
 This is your last chance to grab a pre-loved phone before Calm Friday ends.
 
-A pre-loved phone does everything you need, and it's kind to your wallet.
+Every phone is like new and flawless, with 100% battery health. They are 100% genuine and 100% good quality, and every one is totally guaranteed.
 
 [Shop phones](https://easybuy.example/calm-friday)
 
