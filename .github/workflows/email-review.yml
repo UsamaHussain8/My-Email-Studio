@@ -1,0 +1,163 @@
+# Email review
+#
+# Runs scripts/review.mjs (Claude Code with no one typing) on every campaign
+# that a pull request changes, and fails the check if any finding is high
+# severity. It only reads files. It never sends email: there is no Resend key
+# here, and Claude is limited to the Read, Glob and Grep tools.
+#
+# Needs the ANTHROPIC_API_KEY repository secret.
+
+name: Email review
+
+on:
+  pull_request:
+    paths:
+      - "campaigns/**/emails/*.md"
+      - "brand/voice.md"
+      - ".claude/rules/emails.md"
+      - "scripts/review.mjs"
+      - "review/findings.schema.json"
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: "Campaign folder to review (for example campaigns/calm-friday-launch or campaigns/test-bad)"
+        required: true
+        default: "campaigns/calm-friday-launch"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: email-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code@2.1.319
+
+      - name: Find the campaign folders to review
+        id: folders
+        env:
+          EVENT: ${{ github.event_name }}
+          INPUT_FOLDER: ${{ inputs.folder }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            folder="${INPUT_FOLDER%/}"
+            if ! echo "$folder" | grep -Eq '^campaigns/[A-Za-z0-9._-]+$'; then
+              echo "::error::Folder must look like campaigns/<name>. Got: $folder"
+              exit 1
+            fi
+            folders="$folder"
+          else
+            changed=$(git diff --name-only "$BASE_SHA...HEAD")
+            echo "Changed files:"
+            echo "$changed"
+
+            if echo "$changed" | grep -Eq '^(brand/voice\.md|\.claude/rules/emails\.md|scripts/review\.mjs|review/findings\.schema\.json)$'; then
+              # A rule changed, so every campaign with emails could be affected.
+              folders=$(find campaigns -path '*/emails/*.md' | cut -d/ -f1-2 | sort -u)
+            else
+              folders=$(echo "$changed" | grep -E '^campaigns/[^/]+/.*emails/[^/]+\.md$' | cut -d/ -f1-2 | sort -u || true)
+            fi
+
+            # campaigns/test-bad breaks the rules on purpose, so it would always
+            # fail. Run it by hand (Run workflow button) to prove the check works.
+            folders=$(echo "$folders" | grep -v '^campaigns/test-bad$' || true)
+          fi
+
+          echo "Folders to review:"
+          echo "${folders:-(none)}"
+          {
+            echo "list<<EOF"
+            echo "$folders"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Review the emails
+        if: steps.folders.outputs.list != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FOLDERS: ${{ steps.folders.outputs.list }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+          mkdir -p review-results
+          high_found=0
+          error_found=0
+
+          echo "## Email review" >> "$GITHUB_STEP_SUMMARY"
+
+          while IFS= read -r folder; do
+            [ -z "$folder" ] && continue
+            if [ ! -d "$folder" ]; then
+              echo "Skipping $folder (folder was removed)."
+              continue
+            fi
+
+            echo "::group::Reviewing $folder"
+            if node scripts/review.mjs "$folder"; then code=0; else code=$?; fi
+            echo "::endgroup::"
+
+            name=$(basename "$folder")
+            if [ "$code" -eq 2 ]; then
+              error_found=1
+              echo "::error::The review of $folder could not finish (exit code 2)."
+              echo "### $folder: review could not finish" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+            [ "$code" -eq 1 ] && high_found=1
+
+            cp review/findings.json "review-results/$name.json"
+
+            # Write the findings as a table on the run's summary page.
+            node -e '
+              const [file, folder] = process.argv.slice(1);
+              const { findings } = JSON.parse(require("fs").readFileSync(file, "utf8"));
+              const cell = (s) => String(s).replace(/\|/g, "&#124;").replace(/\n/g, " ");
+              let out = `### ${folder}: ${findings.length} finding(s)\n\n`;
+              if (findings.length) {
+                out += "| Severity | File | Line | Problem | Fix |\n|---|---|---|---|---|\n";
+                for (const f of findings) {
+                  out += `| ${f.severity} | ${cell(f.file)} | ${f.line} | ${cell(f.problem)} | ${cell(f.fix)} |\n`;
+                }
+              } else {
+                out += "No problems found.\n";
+              }
+              process.stdout.write(out + "\n");
+            ' "review/findings.json" "$folder" >> "$GITHUB_STEP_SUMMARY"
+          done <<< "$FOLDERS"
+
+          if [ "$error_found" -eq 1 ]; then
+            exit 2
+          fi
+          if [ "$high_found" -eq 1 ]; then
+            echo "::error::At least one high-severity finding. See the summary for details."
+            exit 1
+          fi
+
+      - name: Save the findings
+        if: always() && steps.folders.outputs.list != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: email-review-findings
+          path: review-results/
+          if-no-files-found: ignore

@@ -135,6 +135,10 @@ My_Email_Studio/
 ├── scripts/
 │   └── review.mjs             Runs an automated brand review of a campaign folder
 │
+├── .github/
+│   └── workflows/
+│       └── email-review.yml   Runs review.mjs on pull requests that change emails (see CI below)
+│
 └── .claude/
     ├── settings.json          Turns on the marketing plugin and the send guard
     ├── settings.local.json    Your own settings (not in git, you create it, see Setup)
@@ -246,6 +250,14 @@ To see the review tools catch mistakes, try it on the broken test email:
 ```bash
 node scripts/review.mjs campaigns/test-bad
 ```
+
+**Automatic review on GitHub (CI):**
+
+`.github/workflows/email-review.yml` runs the same review on GitHub for every pull request that changes an email, `brand/voice.md`, the email rules or the review script. It reviews only the campaign folders that changed, or every campaign if a rule changed. The check fails if any finding is high severity. The findings show on the run's summary page and are saved as a download.
+
+- It needs an `ANTHROPIC_API_KEY` secret in the repo settings.
+- It only reads files. It has no Resend key and can't send email.
+- `campaigns/test-bad` is skipped on pull requests, because it is broken on purpose. To see the check catch mistakes, open **Actions > Email review > Run workflow** and enter `campaigns/test-bad`.
 
 **Write a copy of each email for every lead group (inside Claude Code):**
 
