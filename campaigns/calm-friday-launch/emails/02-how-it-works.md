@@ -1,5 +1,5 @@
 Subject: How The Calm Friday works, in 4 steps
-Preview: Join free, earn up to 500 credits, save 15% on phones, laptops, tablets and more.
+Preview: Join free, earn up to 500 credits, and save 15% on everything in our store.
 
 Dear {{first_name}},
 
@@ -15,7 +15,7 @@ Choose a gadget you no longer use, and swap or sell it to us. We accept items of
 We give you up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition. 100 credits = Rs 1,000. Your credits don't expire while your account is active.
 
 **4. Save 15% on Calm Friday.**
-On Friday 1 January 2027, members get 15% off pre-loved phones, laptops, tablets and accessories. Audio and wearables are not included. You can use your credits on the same order.
+On Friday 1 January 2027, members get 15% off everything in our store. You can use your credits on the same order.
 
 That's all there is to it.
 

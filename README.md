@@ -33,7 +33,8 @@ The voice is **calm, warm and friendly**: simple English, a bit casual, like a h
 | Swap credits | Up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition |
 | Credit value | 100 credits = Rs 1,000. Credits don't expire while the account is active. |
 | Waitlist thank-you | 100 bonus credits (Rs 1,000) for joining by **Thursday 31 December 2026** |
-| Calm Friday sale | **15% off** pre-loved phones, laptops, tablets and accessories on **Friday 1 January 2027** (not audio or wearables) |
+| Calm Friday sale | **15% off everything in the store** on **Friday 1 January 2027** |
+| Items that fail the quality check | Never listed. Sent back to the seller, who pays the return delivery cost |
 | Using both | Credits can be used on the same order as the 15% off |
 
 - **Goal:** 300 waitlist members join between Monday 7 December 2026 and Sunday 3 January 2027.

@@ -7,7 +7,7 @@ Just a gentle note as the year comes to a close, with thanks for swapping with u
 
 As a thank-you for being on our waitlist, you get **100 bonus credits (Rs 1,000) for joining by Thursday 31 December**. That's today, so there's still time if you'd like them.
 
-Tomorrow is Calm Friday. On Friday 1 January, members get **15% off pre-loved phones, laptops, tablets and accessories**. Audio and wearables are not included. You can use your bonus credits on the same order.
+Tomorrow is Calm Friday. On Friday 1 January, members get **15% off everything in our store**. You can use your bonus credits on the same order.
 
 Membership is free, and your credits don't expire while your account is active. So there's nothing big to plan. Once you join, you can also earn credits on your next swap and use them whenever it suits you.
 
