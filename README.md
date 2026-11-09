@@ -253,7 +253,7 @@ node scripts/review.mjs campaigns/test-bad
 
 **Automatic review on GitHub (CI):**
 
-`.github/workflows/email-review.yml` runs the same review on GitHub for every pull request that changes an email, `brand/voice.md`, the email rules or the review script. It reviews only the campaign folders that changed, or every campaign if a rule changed. The check fails if any finding is high severity. The findings show on the run's summary page and are saved as a download.
+`.github/workflows/email-review.yml` runs on GitHub for every pull request. If the pull request changes an email, it reviews only the campaign folders that changed. If it changes `brand/voice.md`, the email rules, the review script or the workflow itself, it reviews every campaign. If nothing like that changed, it skips the review and passes in a few seconds, without calling Claude. The check fails if any finding is high severity. The findings show on the run's summary page and are saved as a download.
 
 - It needs an `ANTHROPIC_API_KEY` secret in the repo settings.
 - It only reads files. It has no Resend key and can't send email.
