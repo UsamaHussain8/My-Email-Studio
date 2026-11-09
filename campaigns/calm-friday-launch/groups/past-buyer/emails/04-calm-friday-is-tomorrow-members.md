@@ -1,11 +1,11 @@
 Subject: Calm Friday is tomorrow. Your credits are ready
-Preview: 15% off pre-loved phones, laptops, tablets and accessories, just for members.
+Preview: 15% off everything in our store tomorrow, just for members.
 
 Dear {{first_name}},
 
 Just a gentle note as the year comes to a close, in case you're thinking about your next gadget.
 
-Tomorrow is Calm Friday. On Friday 1 January, as a member, you get **15% off pre-loved phones, laptops, tablets and accessories**. Audio and wearables are not included.
+Tomorrow is Calm Friday. On Friday 1 January, as a member, you get **15% off everything in our store**.
 
 Your credits are ready, and you can use them on the same order as the 15% off to save more on an upgrade. If you joined by Thursday 31 December, that includes your 100 bonus credits (Rs 1,000).
 
