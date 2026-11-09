@@ -2,7 +2,7 @@
 
 Planning document only. No email in this plan goes to real people from this studio. Sending happens later, in a sending tool, once you approve the final drafts.
 
-Related: `campaigns/calm-friday/brief.md` (the offer brief and confirmed decisions), `brand/voice.md` (voice rules).
+Related: `brand/voice.md` (voice rules). The confirmed offer details are in section 1 and the accuracy rules in section 3 of this plan.
 
 ---
 

@@ -40,7 +40,7 @@ The voice is **calm, warm and friendly**: simple English, a bit casual, like a h
 - **Channel:** email only.
 - **Tone:** no pressure. Even the bonus deadline is a gentle reminder, never a push.
 
-The full plan (calendar, metrics, budget, risks) is in [`campaigns/calm-friday-launch/plan.md`](campaigns/calm-friday-launch/plan.md). The offer decisions behind it are in [`campaigns/calm-friday/brief.md`](campaigns/calm-friday/brief.md).
+The full plan (offer, calendar, metrics, budget, risks) is in [`campaigns/calm-friday-launch/plan.md`](campaigns/calm-friday-launch/plan.md). Section 1 has the confirmed offer details, and section 3 has the accuracy rules every email must follow.
 
 ## The groups involved
 
@@ -107,8 +107,6 @@ My_Email_Studio/
 │   └── leads.csv              24 made-up practice leads with @example.com addresses, 8 per group
 │
 ├── campaigns/
-│   ├── calm-friday/
-│   │   └── brief.md           The offer brief and confirmed decisions
 │   ├── calm-friday-launch/
 │   │   ├── plan.md            Full campaign plan: audience, messages, calendar, metrics, budget, risks
 │   │   ├── emails/            The main email drafts (4 emails, 5 files, see above)
@@ -222,10 +220,9 @@ The first time, Claude Code will ask you to:
 If you are new to the repo, read these in order:
 
 1. [`brand/voice.md`](brand/voice.md): how EasyBuy sounds. Two minutes.
-2. [`campaigns/calm-friday/brief.md`](campaigns/calm-friday/brief.md): the offer in short.
-3. [`campaigns/calm-friday-launch/plan.md`](campaigns/calm-friday-launch/plan.md): the full plan. Sections 1 to 3 are enough to start.
-4. [`campaigns/calm-friday-launch/emails/`](campaigns/calm-friday-launch/emails/): the actual emails.
-5. [`.claude/rules/emails.md`](.claude/rules/emails.md): the format every email must follow.
+2. [`campaigns/calm-friday-launch/plan.md`](campaigns/calm-friday-launch/plan.md): the full plan. Sections 1 to 3 (the offer, the groups and the accuracy rules) are enough to start.
+3. [`campaigns/calm-friday-launch/emails/`](campaigns/calm-friday-launch/emails/): the actual emails.
+4. [`.claude/rules/emails.md`](.claude/rules/emails.md): the format every email must follow.
 
 ### Things you can do
 
