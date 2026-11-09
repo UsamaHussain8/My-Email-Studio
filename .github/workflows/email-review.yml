@@ -10,13 +10,11 @@
 name: Email review
 
 on:
+  # Runs on every pull request, with no path filter. "review" is a required
+  # check on master, and a required check that never starts would block the
+  # PR forever. When no email or rule changed, the review step is skipped,
+  # Claude is not called, and the check passes in a few seconds.
   pull_request:
-    paths:
-      - "campaigns/**/emails/*.md"
-      - "brand/voice.md"
-      - ".claude/rules/emails.md"
-      - "scripts/review.mjs"
-      - "review/findings.schema.json"
   workflow_dispatch:
     inputs:
       folder:
@@ -38,14 +36,14 @@ jobs:
 
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: "22"
+          node-version: "24"
 
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code@2.1.319
@@ -69,7 +67,7 @@ jobs:
             echo "Changed files:"
             echo "$changed"
 
-            if echo "$changed" | grep -Eq '^(brand/voice\.md|\.claude/rules/emails\.md|scripts/review\.mjs|review/findings\.schema\.json)$'; then
+            if echo "$changed" | grep -Eq '^(brand/voice\.md|\.claude/rules/emails\.md|scripts/review\.mjs|review/findings\.schema\.json|\.github/workflows/email-review\.yml)$'; then
               # A rule changed, so every campaign with emails could be affected.
               folders=$(find campaigns -path '*/emails/*.md' | cut -d/ -f1-2 | sort -u)
             else
@@ -156,7 +154,7 @@ jobs:
 
       - name: Save the findings
         if: always() && steps.folders.outputs.list != ''
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: email-review-findings
           path: review-results/
