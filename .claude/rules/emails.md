@@ -35,3 +35,12 @@ You're getting this because you joined the EasyBuy Calm Friday waitlist.
 EasyBuy, {{company_address}} · Unsubscribe: {{unsubscribe_url}}
 
 Nothing comes after the footer.
+
+## 5. Facts must match the campaign's own plan
+
+- Every campaign has its own `plan.md` at the top of its folder, next to `emails/`. For example, emails in `campaigns/calm-friday-launch/` are checked against `campaigns/calm-friday-launch/plan.md`.
+- When reviewing an email, also check it against its own campaign's `plan.md`. Every offer detail in the email (credits, discounts, what the discount covers, dates, deadlines, returns and so on) must match the plan, and the email must follow every accuracy rule in the plan.
+- An email that states a fact the plan does not support, or breaks one of the plan's accuracy rules, is a high-severity problem. A wrong fact is a promise we can't keep.
+- Copies in a campaign's `groups/<group>/emails/` folders belong to that same campaign and use the same `plan.md`.
+- Use only that campaign's own plan. Never use another campaign's plan, emails or notes to judge it. What is true for one campaign can be wrong for another.
+- If a campaign has no `plan.md`, report that as one high-severity problem, because its facts can't be checked.

@@ -2,7 +2,9 @@
 #
 # Runs scripts/review.mjs (Claude Code with no one typing) on every campaign
 # that a pull request changes, and fails the check if any finding is high
-# severity. It only reads files. It never sends email: there is no Resend key
+# severity. Emails are checked against brand/voice.md, .claude/rules/emails.md
+# and their own campaign's plan.md (rule 5 in emails.md says so), so a change
+# to a campaign's plan.md also reviews that campaign. It only reads files. It never sends email: there is no Resend key
 # here, and Claude is limited to the Read, Glob and Grep tools.
 #
 # Needs the ANTHROPIC_API_KEY repository secret.
@@ -71,7 +73,9 @@ jobs:
               # A rule changed, so every campaign with emails could be affected.
               folders=$(find campaigns -path '*/emails/*.md' | cut -d/ -f1-2 | sort -u)
             else
-              folders=$(echo "$changed" | grep -E '^campaigns/[^/]+/.*emails/[^/]+\.md$' | cut -d/ -f1-2 | sort -u || true)
+              # Review a campaign when one of its emails or its own plan.md
+              # changed. Each campaign is checked only against its own plan.
+              folders=$(echo "$changed" | grep -E '^campaigns/[^/]+/(plan\.md|.*emails/[^/]+\.md)$' | cut -d/ -f1-2 | sort -u || true)
             fi
 
             # campaigns/test-bad breaks the rules on purpose, so it would always
