@@ -12,7 +12,7 @@ Yes. The Calm Friday is a free membership. There is nothing to pay.
 We give you up to 500 credits (up to Rs 5,000) for each accepted item, based on the item and its condition. 100 credits = Rs 1,000.
 
 **Which items get 15% off on Calm Friday?**
-Everything. On Friday 1 January 2027, members get 15% off everything in our store, from phones and laptops to earbuds and smartwatches.
+Everything. On Friday 1 January 2027, members get 15% off everything in our store.
 
 **Can I use my credits and the 15% off together?**
 Yes. You can use your credits on the same order as the 15% off.

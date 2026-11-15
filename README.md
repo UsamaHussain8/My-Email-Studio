@@ -144,7 +144,7 @@ My_Email_Studio/
     ├── hooks/
     │   └── send-guard.mjs     Blocks email to anyone except @resend.dev test addresses and MY_EMAIL
     ├── rules/
-    │   └── emails.md          Format rules for every email file (subject length, link, footer)
+    │   └── emails.md          Rules for every email file (subject length, link, footer, facts match the campaign's plan.md)
     └── skills/
         └── personalize/
             └── SKILL.md       The /personalize skill: writes one copy of each email per lead group
@@ -239,9 +239,9 @@ If you are new to the repo, read these in order:
 node scripts/review.mjs campaigns/calm-friday-launch
 ```
 
-This runs Claude Code with no one typing and saves the results to `review/findings.json`. It ends with exit code 1 if any problem is high severity. If you run it again on the same folder, it reports only new or still-unfixed problems.
+This runs Claude Code with no one typing and saves the results to `review/findings.json`. It checks every email against `brand/voice.md`, `.claude/rules/emails.md` and that campaign's own `plan.md` (rule 5 in `emails.md`), so a wrong offer fact counts as a problem. Each campaign is checked only against its own plan, never another campaign's. It ends with exit code 1 if any problem is high severity. If you run it again on the same folder, it reports only new or still-unfixed problems.
 
-Right now `review/findings.json` has an empty findings list. That's because the last review of `campaigns/calm-friday-launch` found no problems. The only earlier finding, a "free returns" promise in email 03, has been fixed, so it wasn't reported again.
+Right now `review/findings.json` has an empty findings list. That's because the last review of `campaigns/calm-friday-launch` found no problems. Earlier reviews found two problems in email 03, and both have been fixed: a "free returns" promise, and a list of product types after the 15% off, which the plan's accuracy rules don't allow.
 
 To see the review tools catch mistakes, try it on the broken test email:
 
@@ -251,7 +251,7 @@ node scripts/review.mjs campaigns/test-bad
 
 **Automatic review on GitHub (CI):**
 
-`.github/workflows/email-review.yml` runs on GitHub for every pull request. If the pull request changes an email, it reviews only the campaign folders that changed. If it changes `brand/voice.md`, the email rules, the review script or the workflow itself, it reviews every campaign. If nothing like that changed, it skips the review and passes in a few seconds, without calling Claude. The check fails if any finding is high severity. The findings show on the run's summary page and are saved as a download.
+`.github/workflows/email-review.yml` runs on GitHub for every pull request. If the pull request changes an email or a campaign's `plan.md`, it reviews only the campaign folders that changed. If it changes `brand/voice.md`, the email rules, the review script or the workflow itself, it reviews every campaign. If nothing like that changed, it skips the review and passes in a few seconds, without calling Claude. The check fails if any finding is high severity. The findings show on the run's summary page and are saved as a download.
 
 - It needs an `ANTHROPIC_API_KEY` secret in the repo settings.
 - It only reads files. It has no Resend key and can't send email.
